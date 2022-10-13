@@ -1,28 +1,7 @@
 #!/bin/bash
 
-# if [ ! -f .env ]
-# then
-#   echo "Activating"
-#   export $(cat .env | xargs)
-# fi
-# export $(cat .env | xargs)
-
-
-
-# set -a
-# # cat <(cat .env | sed -e '/^#/d' -e "s/'/'\\\''/g")
-# envVars=$(cat <(cat .env | sed -e '/^#/d' -e "s/'/'\\\''/g"))
-# set +a
-
-# echo "$envVars"
-
-# export args2=$(echo "$envVars" | tr '\n' '\0')
-# export $(echo "$args2" | xargs -0 -n 2)
-
 source .env
 
-# export $(printf "$envVars")
-# export $(echo "$envVars" | myxargs -0)
 echo $NODE_URL
 echo $ADDRESS
 
