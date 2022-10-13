@@ -1,0 +1,6 @@
+[submodule "safe-contracts"]
+	path = safe-contracts
+	url = https://github.com/safe-global/safe-contracts
+[submodule "safe-singleton-factory"]
+	path = safe-singleton-factory
+	url = https://github.com/safe-global/safe-singleton-factory
