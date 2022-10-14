@@ -2,11 +2,6 @@
 
 source .env
 
-echo $NODE_URL
-echo $ADDRESS
-
-echo $MNEMONIC
-
 # Get nonce
 hexNonce=$(curl --location --request POST "$NODE_URL" \
 --header 'Content-Type: application/json' \
@@ -23,6 +18,8 @@ hexNonce=$(curl --location --request POST "$NODE_URL" \
 trimmedNonce=$(echo $hexNonce | tr -d '"')
 nonce=$(printf "%d\n" $trimmedNonce)
 echo "Nonce: $nonce"
+incrementedNonce=$(($nonce + 1))
+echo "Incremented nonce: $incrementedNonce"
 
 # Get ChainID
 hexChainID=$(curl --location --request POST "$NODE_URL" \
@@ -44,16 +41,15 @@ printf "MNEMONIC=\"$MNEMONIC\"\nRPC=\"$NODE_URL\"\n" > .env
 
 yarn
 # yarn compile $chainID --nonce=$nonce
-yarn compile $chainID --nonce=0
+yarn compile $chainID --nonce=$incrementedNonce
+# yarn compile $chainID --nonce=0
 yarn pack
 popd
 
 pushd safe-contracts
 printf "MNEMONIC=\"$MNEMONIC\"\nNODE_URL=\"$NODE_URL\"\nCUSTOM_DETERMINISTIC_DEPLOYMENT=\"true\"\n" > .env
 mkdir -p artifacts
-
 popd
-# cp -r safe-singleton-factory/artifacts/$chainID safe-contracts/artifacts
 
 pushd safe-contracts
 # yarn deploy-all custom
