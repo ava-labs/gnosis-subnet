@@ -54,7 +54,7 @@ popd
 pushd safe-contracts
 # yarn deploy-all custom
 yarn
-# yarn add @gnosis.pm/safe-singleton-factory
+yarn cache clean @gnosis.pm/safe-singleton-factory
 yarn add file:../safe-singleton-factory/gnosis.pm-safe-singleton-factory-v1.0.11.tgz
 # yarn build
 yarn hardhat --network custom deploy

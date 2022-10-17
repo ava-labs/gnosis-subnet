@@ -4,6 +4,3 @@
 [submodule "safe-singleton-factory"]
 	path = safe-singleton-factory
 	url = https://github.com/safe-global/safe-singleton-factory
-[submodule "hardhat-deploy"]
-	path = hardhat-deploy
-	url = git@github.com:wighawag/hardhat-deploy.git
