@@ -1,5 +1,6 @@
 #!/bin/bash
 
+git submodule update --init
 source .env
 
 # Get nonce
