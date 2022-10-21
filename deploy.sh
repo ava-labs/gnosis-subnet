@@ -1,6 +1,9 @@
 #!/bin/bash
 
 git submodule update --init
+
+# check that .env exists
+
 source .env
 
 # Get nonce
