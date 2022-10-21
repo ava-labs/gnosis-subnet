@@ -2,7 +2,7 @@
 
 git submodule update --init
 
-# check that .env exists
+# TODO check that .env exists
 
 source .env
 
@@ -44,9 +44,7 @@ pushd safe-singleton-factory
 printf "MNEMONIC=\"$MNEMONIC\"\nRPC=\"$NODE_URL\"\n" > .env
 
 yarn
-# yarn compile $chainID --nonce=$nonce
 yarn compile $chainID --nonce=$incrementedNonce
-# yarn compile $chainID --nonce=0
 yarn pack
 popd
 
@@ -56,11 +54,10 @@ mkdir -p artifacts
 popd
 
 pushd safe-contracts
-# yarn deploy-all custom
 yarn
 yarn cache clean @gnosis.pm/safe-singleton-factory
 yarn add file:../safe-singleton-factory/gnosis.pm-safe-singleton-factory-v1.0.11.tgz
-# yarn build
+
 yarn hardhat --network custom deploy
 yarn hardhat --network custom local-verify
 popd
