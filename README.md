@@ -1,10 +1,10 @@
-# Avalanche Gnosis Safe Deployer
+# Gnosis Safe Deployer for Avalanche Subnets
 
 You can use this repository to deploy gnosis safe contracts onto Avalanche subnets.
 
-## Disclaimer:
+## Disclaimer
 
-This repository is not an official deployment repository endorsed by the Safe Ecosystem Foundation. It is intended for testing and development purposes only. Use at your own risk.
+This repository is not an official deployment repository endorsed by the Safe Ecosystem Foundation. It is intended for testing and development purposes only. **Use at your own risk.**
 
 ## Installation
 
