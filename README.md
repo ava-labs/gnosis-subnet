@@ -2,6 +2,10 @@
 
 You can use this repository to deploy gnosis safe contracts onto Avalanche subnets.
 
+## Disclaimer:
+
+This repository is not an official deployment repository endorsed by the Safe Ecosystem Foundation. It is intended for testing and development purposes only. Use at your own risk.
+
 ## Installation
 
 After cloning this repo, you must install jq. On Ubuntu, run `sudo apt install jq`.
